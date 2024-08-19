@@ -1,21 +1,24 @@
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import FicheLogement from './pages/FicheLogement';
+import Layout from './components/Layout';
 import APropos from './pages/APropos';
+import FicheLogement from './pages/FicheLogement';
 import Error404 from './pages/Error404';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/fichelogement" element={<FicheLogement />} />
-        <Route path="/error404" element={<Error404 />} />
-        <Route path="/apropos" element={<APropos/>}/>
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/apropos" element={<APropos />} />
+          <Route path="/fichelogement" element={<FicheLogement />} />
+          <Route path="/error404" element={<Error404 />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }
-
 
 export default App;
