@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
-import Home from './components/pages/Home';
-import FicheLogement from './components/pages/FicheLogement';
-import APropos from './components/pages/APropos';
-import Error404 from './components/pages/Error404';
+import Home from './pages/Home';
+import FicheLogement from './pages/FicheLogement';
+import APropos from './pages/APropos';
+import Error404 from './pages/Error404';
 
 function App() {
   return (
