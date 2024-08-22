@@ -1,0 +1,30 @@
+// // App.scss : Utilise-le pour les styles communs à l'ensemble de ton application mais qui ne sont pas strictement globaux.
+
+// // src/styles/App.scss
+
+// // Importation des styles de base
+// @import 'base';
+
+// // Styles pour la structure principale de l'application
+// .app {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+// .header, .footer {
+//   background-color: #3498db;
+//   color: white;
+//   padding: 1rem;
+// }
+
+// .content {
+//   flex: 1;
+//   padding: 20px;
+//   background-color: #ffffff;
+// }
+
+// // Overrides ou styles spécifiques
+// a {
+//   font-weight: bold;
+// }
