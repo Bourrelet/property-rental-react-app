@@ -2,11 +2,11 @@ import React from 'react';
 import './App.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Layout from './components/layout/Layout';
-import APropos from './pages/APropos';
-import FicheLogement from './pages/FicheLogement';
-import Error404 from './pages/Error404';
+import Home from '../pages/Home';
+import Layout from '../components/layout/Layout';
+import APropos from '../pages/APropos';
+import FicheLogement from '../pages/FicheLogement';
+import Error404 from '../pages/Error404';
 
 function App() {
   return (
