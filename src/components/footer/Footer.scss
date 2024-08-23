@@ -1,5 +1,18 @@
+@import '../../styles/mixins';
 
+.footer {
+        &__container {
+            @include column-center;
+            background-color: black;
+            height: 209px;
+        }    
 
+        &__txt {
+            color: white;
+            width: 133.59px;
+            text-align: center;
+    }
+}
 // Layout / footer ->
 
 // width: 1440px;

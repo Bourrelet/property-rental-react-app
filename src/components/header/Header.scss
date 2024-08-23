@@ -1,3 +1,22 @@
+@import '../../styles/mixins';
+
+.navbar {
+    @include flex-between;
+    height: 7vh;
+    margin: 20px 20px 0px 20px;
+
+        &__link {
+            @include flex-right;
+            row-gap: 26px;
+            
+        }
+
+            a {
+                margin-left: 26px;
+            }
+}
+
+
 // Layout / header ->
 // width: 1240px;
 // height: 68px;

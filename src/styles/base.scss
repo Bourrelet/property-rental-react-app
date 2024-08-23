@@ -2,16 +2,28 @@
 // Styles généraux du body : Couleurs de fond, marges, paddings globaux, typographie par défaut.
 // Styles globaux : Définition de styles pour les éléments HTML comme les titres (h1, h2, h3), les paragraphes, les listes, etc.
 // Typographie de base : Définition des polices et des tailles globales pour les textes.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ul {
+    list-style-type: none; /* Supprime les puces */
+    padding-left: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+a {
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    display: block; /* Permet au lien de prendre tout l'espace du <li> */
+}
 
 
 // src/styles/base.scss
 
 // // Reset ou Normalize
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//   }
+
   
 //   // Styles de base pour le corps du document
 //   body {
