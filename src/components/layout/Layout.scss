@@ -1,4 +1,11 @@
 // layout.scss
-body {
+.layout {
     min-width: 375px;
+    max-width: 1440px;
+    width: 100vw;
+    // margin: 0 auto;
+
+         &__content {
+             width: 100%;
+         }
 }
