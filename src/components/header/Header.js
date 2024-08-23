@@ -5,9 +5,9 @@ import './Header.scss';
 const Header = () => {
   return (
     <header>
-      <h1>Mon Application</h1>
-      <nav>
-        <ul>
+      <nav className="navbar">
+        <img className="navbar__logo" src="/kasalogodesktop.png" alt="logo Kasa"/>
+        <ul className="navbar__link">
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/apropos">À Propos</Link></li>
         </ul>
