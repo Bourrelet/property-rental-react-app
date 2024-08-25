@@ -1,6 +1,15 @@
+@import '../styles/mixins';
+
 .home-page {
     height: 140.56vh; // 938px
-    margin: 27px 20px;
+    margin: 27px 20px; 
+
+        &__card-container {
+            @include column-center;
+            justify-content: space-between;
+            height: 120.63vh; // 805 px
+            margin: 22px auto 27px;
+        }
 }
 // Home page desktop
 

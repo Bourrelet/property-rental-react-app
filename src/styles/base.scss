@@ -33,6 +33,34 @@ h1 {
     margin-left: 16px;
 }
 
+h2 { // oups et titre fichelogement
+
+}
+
+h3 { // liens nav et apropos
+    
+}
+
+h4 { // titres cards et collapses
+    
+}
+
+strong {
+    font-weight: 700; /* Enlève le gras par défaut */
+    color: rgba(255, 255, 255, 1); /* Inhère la couleur du parent */
+    font-size: 18px;
+    line-height: 25.67px;
+}
+
+li , p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17.11px;
+}
+
+
+
+
 // src/styles/base.scss
 
 // // Reset ou Normalize

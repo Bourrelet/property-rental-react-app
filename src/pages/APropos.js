@@ -1,7 +1,7 @@
 // src/components/APropos.js
 import React from 'react';
 
-function APropos() {
+const APropos = () => {
   return (
     <div>
       <h1>APropos Page</h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.scss';
 
-function Banner() {
+const Banner = () => {
     return (
         <div className="banner">
             <img className="banner__img" src="/shore.png" alt="moutains background"/>

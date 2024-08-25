@@ -1,7 +1,7 @@
 // src/components/FicheLogement.js
 import React from 'react';
 
-function FicheLogement() {
+const FicheLogement = () => {
   return (
     <div>
       <h1>FicheLogement Page</h1>
