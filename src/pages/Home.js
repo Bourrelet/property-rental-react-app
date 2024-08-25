@@ -1,12 +1,15 @@
 // src/components/Home.js
 import React from 'react';
+import Banner from '../components/banner/Banner';
 import './Home.scss';
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home Page!</p>
+    <div className="home-page">
+      <Banner />
+      <div className="home-page__card-container">
+
+      </div>
     </div>
   );
 }
