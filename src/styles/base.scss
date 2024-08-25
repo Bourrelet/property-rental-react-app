@@ -2,11 +2,17 @@
 // Styles généraux du body : Couleurs de fond, marges, paddings globaux, typographie par défaut.
 // Styles globaux : Définition de styles pour les éléments HTML comme les titres (h1, h2, h3), les paragraphes, les listes, etc.
 // Typographie de base : Définition des polices et des tailles globales pour les textes.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 
 ul {
     list-style-type: none; /* Supprime les puces */
@@ -19,6 +25,13 @@ a {
     display: block; /* Permet au lien de prendre tout l'espace du <li> */
 }
 
+h1 {
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 16px;
+}
 
 // src/styles/base.scss
 
