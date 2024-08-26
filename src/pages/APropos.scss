@@ -1,12 +1,13 @@
 @import '../styles/mixins';
 
 .apropos-page {
-    height: 310px;
+    // height: 310px;
     margin: 19px 19.5px; 
 
         &__container {
-            @include column-center;
-            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
             margin: 20px auto;
         }
 }
