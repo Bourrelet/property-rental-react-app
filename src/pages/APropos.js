@@ -8,11 +8,11 @@ const APropos = () => {
   return (
     <div className="apropos-page">
       <Banner />
-      <div className="apropos-page__collapse-container">
-      <Collapse/>
-      <Collapse/>
-      <Collapse/>
-      <Collapse/>
+      <div className="apropos-page__container">
+        <Collapse/>
+        <Collapse/>
+        <Collapse/>
+        <Collapse/>
       </div>
     </div>
   );
