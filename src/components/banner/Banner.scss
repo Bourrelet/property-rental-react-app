@@ -20,6 +20,11 @@
         }
 
         &__title {
+            color: white;
+            text-align: left;
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 16px;
             position: relative;
             z-index: 3;
             width: 60vw;
