@@ -1,0 +1,15 @@
+
+@import '../../styles/mixins';
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+        &__title {
+            text-align: left;
+        }
+        &__text {
+            text-align: left;
+        }  
+}

@@ -1,11 +1,19 @@
 // src/components/APropos.js
 import React from 'react';
+import Banner from '../components/banner/Banner';
+import './APropos.scss';
+import Collapse from '../components/collapse/Collapse';
 
 const APropos = () => {
   return (
-    <div>
-      <h1>APropos Page</h1>
-      <p>This is the APropos Page.</p>
+    <div className="apropos-page">
+      <Banner />
+      <div className="apropos-page__collapse-container">
+      <Collapse/>
+      <Collapse/>
+      <Collapse/>
+      <Collapse/>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,12 @@
+@import '../styles/mixins';
+
+.apropos-page {
+    height: 310px;
+    margin: 19px 19.5px; 
+
+        &__collapse-container {
+            @include column-center;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+}
