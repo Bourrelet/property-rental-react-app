@@ -1,6 +1,9 @@
 .error {
     text-align: center;
     color: rgba(255, 96, 96, 1);
+        &__margin {
+            margin: 113px auto;
+        }
 
         &__title1 {
             font-size: 96px;
