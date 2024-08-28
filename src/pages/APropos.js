@@ -1,10 +1,11 @@
 // src/components/APropos.js
 import React from 'react';
+import mountains from '../components/banner/assets/mountains.png';
 import Banner from '../components/banner/Banner';
 
 import './APropos.scss';
 import Collapse from '../components/collapse/Collapse';
-import mountains from '../components/banner/assets/mountains.png';
+
 
 
 const APropos = () => {

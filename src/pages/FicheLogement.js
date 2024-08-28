@@ -1,12 +1,27 @@
 // src/components/FicheLogement.js
 import React from 'react';
+import './FicheLogement.scss';
+import Collapse from '../components/collapse/Collapse';
 
 const FicheLogement = () => {
   return (
-    <div>
-      <h1>FicheLogement Page</h1>
-      <p>This is the FicheLogement Page.</p>
+    <div className="logement">
+      <div className="gallerie">
+        <Gallery />
+        <Prev />
+        <Next />        
+      </div>
+      <h2>titre dynamique</h2>
+      <p> localisation dynamique</p>
+      <Tags/>
+      <Ratings />
+      <Architect />
+
+      <Collapse />     
+      <Collapse />
+
     </div>
+    
   );
 }
 

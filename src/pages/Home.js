@@ -1,8 +1,9 @@
 // src/components/Home.js
 import React from 'react';
+import shore from '../components/banner/assets/shore.png';
 import Banner from '../components/banner/Banner';
 import Card from '../components/card/Card'
-import shore from '../components/banner/assets/shore.png';
+
 
 import './Home.scss';
 
