@@ -4,12 +4,13 @@ import Banner from '../components/banner/Banner';
 
 import './APropos.scss';
 import Collapse from '../components/collapse/Collapse';
-import mountains from './assets/mountains.png';
+import mountains from '../components/banner/assets/mountains.png';
+
 
 const APropos = () => {
   return (
     <div className="apropos-page">
-      <Banner imgUrl={mountains}/>
+      <Banner bannerImg={mountains}/>
       <div className="apropos-page__container">
         <Collapse/>
         <Collapse/>
