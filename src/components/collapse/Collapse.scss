@@ -1,15 +1,40 @@
-
+@import '../../styles/variables'; // Probleme de module ; ne trouve pas la stylesheet.
 @import '../../styles/mixins';
 
 .collapse {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    text-align: left;
+    line-height: 1.426;
 
-        &__title {
-            text-align: left;
+        &__container {
+            @include flex-between;
+            border-radius: 5px;
+            background-color: rgba(255, 96, 96, 1);
+            color: white;
         }
+
+            &__title {
+                font-size: 13px;
+                padding: 10px 0px 10px 10px;
+            }
+            &__btn {
+                @include flex-left;
+                width: 32px;
+                height: 32px;
+                border: inherit;
+                background-color: inherit;
+                color: inherit;
+            }
+
         &__text {
-            text-align: left;
+            background-color: rgba(246, 246, 246, 0.45);
+            font-size: 12px;
+            padding: 13px 20px 19px;
         }  
+}
+
+.fa-angle-down, .fa-angle-up {
+    font-size: 1.57em;
+    transform: scaleX(1.02);
 }
