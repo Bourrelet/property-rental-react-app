@@ -2,6 +2,13 @@
 import React from 'react';
 import './FicheLogement.scss';
 import Collapse from '../components/collapse/Collapse';
+import Gallery from '../components/gallery/Gallery';
+import Prev from '../components/gallery/prev/Prev';
+import Next from '../components/gallery/next/Next';
+import Architect from '../components/details/Architect'
+import Ratings from '../components/details/Ratings';
+import Tags from '../components/details/Tags';
+
 
 const FicheLogement = () => {
   return (
