@@ -1,15 +1,16 @@
 import React from 'react';
 import './Card.scss';
-import logement from '../../data/logement.json';
 
 
-
-const Card = () => {
+const Card = ({id, title,cover}) => {
     return (
+
+    
     <div className="card-frame">
-        
+        <div>{title}</div>
         <strong className="card-frame__title">
             Titre de la <br/> location
+            <div>{title}</div>
         </strong>
     </div>
     );
