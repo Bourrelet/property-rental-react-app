@@ -1,20 +1,39 @@
-import React from 'react';
 import './Collapse.scss';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 const openButton = <FontAwesomeIcon icon={faAngleUp} />;
 const closeButton = <FontAwesomeIcon icon={faAngleDown} />;
 
-const Collapse = () => {
-    return (
-    <div className="collapse">
-        <div className="collapse__container">
-            <h2 className="collapse__title">Titre du collapse</h2>   
+const Collapse = ({title, content}) => {
 
-                <button className="collapse__btn open-btn">{openButton}</button>
+    const [collapseOpen, setCollaspeOpen] = useState(false);
+
+    
+
+    const toggleCollapse = () => {
+        setCollaspeOpen(!collapseOpen);
+    }
+
+    const dynamicClass = `${collapseOpen ? 'isOpen' : 'isClosed'}`;
+
+    return (
+
+    <div className="collapse">
+
+        <div className="collapse__container">
+
+            <h2 className="collapse__title">{title}</h2>
+
+            <button onClick={toggleCollapse} className="collapse__btn isClosed">
+                {collapseOpen? closeButton : openButton}
+            </button>
          
         </div>
-        <p className="collapse__text">Text du collapse</p> 
+        <div className={`collapse__content ${dynamicClass}`}><p >{content}</p></div>
+             
+
+
     </div>
     );
 

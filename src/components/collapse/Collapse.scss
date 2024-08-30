@@ -27,10 +27,22 @@
                 color: inherit;
             }
 
-        &__text {
+        &__content {
             background-color: $grey-background;
             font-size: 12px;
             padding: 13px 20px 19px;
+
+            &.isClosed {
+                height: 0px;
+                overflow: hidden;
+                transition: height 0.3s ease;
+                padding: 0px;
+            }
+
+            &.isOpen {
+                height: auto;              
+            }
+            
         }  
 }
 
@@ -38,3 +50,4 @@
     font-size: 1.57em;
     transform: scaleX(1.02);
 }
+
