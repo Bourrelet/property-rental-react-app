@@ -3,7 +3,7 @@
 .banner {
     @include flex-left;
     position: relative;
-    width: 100%;
+    width: 89.334vw; // 335px;
     height: 16.634vh; //111px;
 
         &__img {
