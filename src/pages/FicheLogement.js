@@ -1,31 +1,31 @@
 // src/components/FicheLogement.js
 import React from 'react';
+import logements from '../data/logements.json';
+import { useParams } from 'react-router-dom';
 import './FicheLogement.scss';
 import Collapse from '../components/collapse/Collapse';
 import Gallery from '../components/gallery/Gallery';
-import Prev from '../components/gallery/prev/Prev';
-import Next from '../components/gallery/next/Next';
-import Architect from '../components/details/Architect'
-import Ratings from '../components/details/Ratings';
-import Tags from '../components/details/Tags';
 
 
 const FicheLogement = () => {
+
+  const { id } = useParams();
+
+  const logement = logements.find(item => item.id === id);
+
   return (
     <div className="logement">
       <div className="gallerie">
-        <Gallery />
-        <Prev />
-        <Next />        
+        {/* <Gallery />      */}
       </div>
-      <h2>titre dynamique</h2>
-      <p> localisation dynamique</p>
-      <Tags/>
-      <Ratings />
-      <Architect />
+      <h2>{logement.title}</h2>
+      {/* <p>{logement.location}</p>
+      <div>{logement.tags}</div>
+      <div>{logement.rating}</div>
+      <div>{logement.host}</div> */}
 
-      <Collapse />     
-      <Collapse />
+      <Collapse title="Description" content={logement.description}/>     
+      <Collapse title="Équipements" content={logement.equipments}/>
 
     </div>
     
