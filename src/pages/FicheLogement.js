@@ -16,13 +16,23 @@ const FicheLogement = () => {
   return (
     <div className="logement">
       <div className="gallerie">
-        {/* <Gallery />      */}
+        <Gallery logement={logement.pictures} />     
       </div>
       <h2>{logement.title}</h2>
-      {/* <p>{logement.location}</p>
-      <div>{logement.tags}</div>
-      <div>{logement.rating}</div>
-      <div>{logement.host}</div> */}
+      <p>{logement.location}</p>
+
+      {logement.tags.map(tag => {
+        <div>{tag}</div>
+      })}
+      <div>
+        <div>{logement.rating}</div>
+        <div>
+          <p>{logement.host.name}</p>
+          <img src={`${logement.host.picture}`}/>
+        </div>
+      </div>
+      
+
 
       <Collapse title="Description" content={logement.description}/>     
       <Collapse title="Équipements" content={logement.equipments}/>
