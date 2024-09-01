@@ -28,7 +28,7 @@ const FicheLogement = () => {
         <div>{logement.rating}</div>
         <div>
           <p>{logement.host.name}</p>
-          <img src={`${logement.host.picture}`}/>
+          <img src={logement.host.picture}/>
         </div>
       </div>
       
