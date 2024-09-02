@@ -1,7 +1,7 @@
 // src/components/FicheLogement.js
-import React from 'react';
+import React, {useEffect} from 'react';
 import logements from '../data/logements.json';
-import { useParams } from 'react-router-dom';
+import { useParams , useNavigate } from 'react-router-dom';
 import './FicheLogement.scss';
 import Collapse from '../components/collapse/Collapse';
 import Gallery from '../components/gallery/Gallery';
@@ -10,8 +10,19 @@ import Gallery from '../components/gallery/Gallery';
 const FicheLogement = () => {
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
-  const logement = logements.find(item => item.id === id);
+  const logement = logements.find(item => item.id == id);
+
+  useEffect(() => {
+    if (!logement) {
+      navigate('/error');
+    }
+  }, [logement, navigate]);
+
+  if (!logement) {
+    return null;
+  }
 
   return (
     <div className="logement">
@@ -21,9 +32,9 @@ const FicheLogement = () => {
       <h2>{logement.title}</h2>
       <p>{logement.location}</p>
 
-      {logement.tags.map(tag => {
-        <div>{tag}</div>
-      })}
+      {logement.tags.map(tag => (
+        <div key={tag}>{tag}</div>
+      ))}
       <div>
         <div>{logement.rating}</div>
         <div>
