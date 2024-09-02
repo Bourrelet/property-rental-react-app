@@ -24,10 +24,20 @@ const Gallery= ({logement}) => {
         <div>
             <div>
                 <img src={logement[activeIndex]} alt={`Image ${activeIndex} + 1`}/>
-                <div>
-                    <div onClick={prevImg}>{prevBtn}</div>
-                    <div onClick={nextImg}>{nextBtn}</div>
-                </div>                
+
+                {logement.length > 1 && (
+                    <div>
+                        <div onClick={prevImg}>{prevBtn}</div>
+                        <div onClick={nextImg}>{nextBtn}</div>
+                    </div>
+                    )
+                }
+                
+                {logement.length > 1 && (
+                    <p>{`${activeIndex + 1} / ${logement.length}`}</p>
+                    )
+                }  
+
             </div>
         </div>
     );    
