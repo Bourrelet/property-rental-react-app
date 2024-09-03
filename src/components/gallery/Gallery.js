@@ -21,25 +21,23 @@ const Gallery= ({logement}) => {
     };
 
     return (
-        <div>
-            <div>
-                <img src={logement[activeIndex]} alt={`Image ${activeIndex} + 1`}/>
+            <div className='gallerie'>
+                <img className='gallerie__img' src={logement[activeIndex]} alt={`Image ${activeIndex} + 1`}/>
 
                 {logement.length > 1 && (
-                    <div>
-                        <div onClick={prevImg}>{prevBtn}</div>
-                        <div onClick={nextImg}>{nextBtn}</div>
+                    <div className='gallerie__nav'>
+                        <div className='gallerie__nav__btn' onClick={prevImg}>{prevBtn}</div>
+                        <div className='gallerie__nav__btn' onClick={nextImg}>{nextBtn}</div>
                     </div>
                     )
                 }
                 
                 {logement.length > 1 && (
-                    <p>{`${activeIndex + 1} / ${logement.length}`}</p>
+                    <p className='gallerie__index'>{`${activeIndex + 1} / ${logement.length}`}</p>
                     )
                 }  
 
             </div>
-        </div>
     );    
     }
 
