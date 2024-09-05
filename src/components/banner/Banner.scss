@@ -3,8 +3,8 @@
 .banner {
     @include flex-left;
     position: relative;
-    width: 89.334vw; // 335px;
     height: 16.634vh; //111px;
+    overflow: hidden;
 
         &__img {
             @include banner-frame;
@@ -15,7 +15,7 @@
         &__overlay {
             @include banner-frame;
             background-color: rgba(0, 0, 0, 0.6); 
-            mix-blend-mode: darken; /* Applique l'effet de fusion */
+            // mix-blend-mode: darken; /* Applique l'effet de fusion */
             z-index: 2;
         }
 
@@ -30,4 +30,8 @@
             width: 60vw;
         }
 
+}
+
+.montagne {
+    display: none !important;
 }

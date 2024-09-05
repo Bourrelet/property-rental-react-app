@@ -12,7 +12,7 @@ const Home = () => {
   return (
     
     <div className="home-page">
-      <Banner bannerImg={shore}/>
+      <Banner bannerImg={shore} bannerAlt={'rivages'}/>
       <div className="home-page__gallery">
         {logements.map(logement => 
 

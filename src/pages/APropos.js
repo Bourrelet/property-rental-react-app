@@ -6,7 +6,7 @@ import Banner from '../components/banner/Banner';
 import './APropos.scss';
 import Collapse from '../components/collapse/Collapse';
 
-
+const montagne = 'montagne'
 
 const APropos = () => {
 
@@ -31,7 +31,7 @@ const APropos = () => {
 
   return (
     <div className="apropos-page">
-      <Banner bannerImg={mountains}/>
+      <Banner bannerImg={mountains} bannerAlt={montagne}/>
       <div className="apropos-page__container">
         {aProposListContent.map(subject => 
           (<Collapse key={subject.key} title={subject.title} content={subject.content}/>))
