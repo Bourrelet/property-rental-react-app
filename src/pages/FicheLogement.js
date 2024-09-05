@@ -15,8 +15,6 @@ import Gallery from '../components/gallery/Gallery';
 
 const FicheLogement = () => {
 
-
-
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -37,13 +35,15 @@ const FicheLogement = () => {
       <div className="gallerie">
         <Gallery logement={logement.pictures} />     
       </div>
-      <h2 className='logement__title'>{logement.title}</h2>
+      <h1 className='logement__title'>{logement.title}</h1>
       <p className='logement__loc'>{logement.location}</p>
 
-      {logement.tags.map(tag => (
-        <div className='logement__tag' key={tag}>{tag}</div>
-      ))}
-      
+      <div className='logement__tags'>
+        {logement.tags.map(tag => (
+          <div className='logement__tag' key={tag}>{tag}</div>
+        ))}
+      </div>
+
       <div className='logement__review'>
 
         <div className='logement__rating'>
@@ -55,6 +55,7 @@ const FicheLogement = () => {
           />)
           )}
         </div>
+
         <div className='logement__host'>
           <p className='logement__host__name'>{logement.host.name}</p>
           <img className='logement__host__img' src={logement.host.picture}/>
@@ -63,9 +64,11 @@ const FicheLogement = () => {
       </div>
       
 
-      <div className='logement_collapse'></div>
+      <div className='logement__collapse'>
       <Collapse title="Description" content={logement.description}/>     
       <Collapse title="Équipements" content={logement.equipments}/>
+      </div>
+
 
     </div>
     
