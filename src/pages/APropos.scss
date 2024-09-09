@@ -2,12 +2,21 @@
 
 .apropos-page {
     // height: 310px;
-    // margin: 19px 19.5px; 
+    // margin: 19px 19.5px;
+    margin-top: 19px;
+    @media (min-width: 768px) { 
+        margin-top: 38px;
+    }
+    
 
         &__container {
             display: flex;
             flex-direction: column;
             row-gap: 20px;
             margin: 20px auto;
+            @media (min-width: 768px) { 
+                margin: 37px 8.75%;
+                row-gap: 30px;
+            }
         }
 }

@@ -3,18 +3,35 @@
     color: rgba(255, 96, 96, 1);
         &__margin {
             margin: 113px auto;
+            @media (min-width: 768px) { 
+                margin: 139px auto;
+            }
         }
 
         &__title1 {
             font-size: 96px;
             font-weight: 700;
             line-height: 136.9px;
+            @media (min-width: 768px) { 
+                font-size: 288px;
+                line-height: 410.69px;
+                }
+            
         }
 
         &__title2 {
             font-size: 18px;
             font-weight: 500;
             line-height: 25.67px;
+            @media (min-width: 768px) { 
+                font-size: 36px;
+                line-height: 51.34px;
+            }
+                br {
+                    @media (min-width: 768px) { 
+                    display: none;
+                }
+            }
         }
 
         &__link {
@@ -23,5 +40,9 @@
             line-height: 19.96px;
             color: black;
             text-decoration: underline;
+            @media (min-width: 768px) {                
+                font-size: 18px;
+                line-height: 25.67px;
+            }
         }
 }

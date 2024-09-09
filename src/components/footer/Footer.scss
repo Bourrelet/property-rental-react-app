@@ -4,9 +4,9 @@
     width: 100vw;
     min-width: 375px;
     margin-top: 27px;
-    transform: translateX(-5.333vw); //20px mobile
+    transform: translateX(-5.333%); //20px mobile
     @media (min-width: 768px) { 
-        transform: translateX(-6.944vw); // 100px desktop
+        transform: translateX(-6.944%); // 100px desktop
         max-width: 1440px;
 
     }
