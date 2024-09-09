@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar">
-        <img className="navbar__logo" src="/kasalogomobile.png" alt="logo Kasa"/>
+        <img className="navbar__logo" src="/kasalogomobile.png" 
+         srcSet="/kasalogomobile.png 768w, /kasalogodesktop.png 769w"
+        alt="logo Kasa"/>
         <ul className="navbar__link">
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/apropos">À Propos</Link></li>

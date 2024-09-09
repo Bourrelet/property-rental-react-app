@@ -3,8 +3,12 @@
 .banner {
     @include flex-left;
     position: relative;
-    height: 16.634vh; //111px;
+    height: 111px;
     overflow: hidden;
+    @media (min-width: 768px) { 
+        height: 223px;
+
+    }
 
         &__img {
             @include banner-frame;
@@ -28,6 +32,14 @@
             position: relative;
             z-index: 3;
             width: 60vw;
+            @media (min-width: 768px) { 
+                margin: 0 auto;
+                text-align: center;
+                font-size: 48px;
+                // line-height: 68.45px;
+
+        
+            }
         }
 
 }

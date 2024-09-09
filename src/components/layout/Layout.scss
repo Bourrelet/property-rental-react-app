@@ -4,7 +4,12 @@
     min-width: 375px;
     max-width: 1440px;
     width: 100vw;
-    margin: 0 auto;
+    padding: 20px 5.333% 0px 5.333%;
+
+    @media (min-width: 768px) { 
+        padding: 45px 6.944% 0px 6.944%;
+
+    }
 
          &__content {
              width: 100%;
