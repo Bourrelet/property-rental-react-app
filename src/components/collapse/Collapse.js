@@ -24,15 +24,13 @@ const Collapse = ({title, content}) => {
         <div className="collapse__container">
 
             <h2 className="collapse__title">{title}</h2>
-
             <button onClick={toggleCollapse} className="collapse__btn isClosed">
                 {collapseOpen? closeButton : openButton}
             </button>
          
         </div>
-        <div className={`collapse__content ${dynamicClass}`}><p >{content}</p></div>
-             
 
+        <div className={`collapse__content ${dynamicClass}`}><p >{content}</p></div>          
 
     </div>
     );

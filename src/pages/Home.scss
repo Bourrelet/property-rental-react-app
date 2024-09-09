@@ -14,12 +14,14 @@
             flex-direction: column;
             align-items: center;
             row-gap: 20px;
+            
 
             // height: 120.63vh; // 805 px
             margin: 22px auto 27px;
 
             @media (min-width: 768px) {
                 background-color: $grey-background;
+                border-radius: 25px;
                 justify-content: center;
                 flex-direction: row; 
                 flex-wrap: wrap;

@@ -2,12 +2,15 @@
 @import '../styles/mixins';
 
 .logement {
-    // margin: 5.333vw 27px;
+    margin: 27px 0px 27px 0px;
 
     @media (min-width: 768px) { 
         margin: 6.944vw 50px;
 
     }
+    // &__content-flexbox {
+        
+    // }
 
 
     &__title {
@@ -17,6 +20,11 @@
         line-height: 25.67px;
         text-align: left;
         margin-bottom: 5px;
+        @media (min-width: 768px) { 
+            margin-bottom: 0px;
+            font-size: 36px;
+            line-height: 51.34px;
+        }
 
     }
 
@@ -26,6 +34,11 @@
         line-height: 19.96px;
         text-align: left;
         margin-bottom: 10px;
+        @media (min-width: 768px) {
+            margin-bottom: 20px; 
+            font-size: 18px;
+            line-height: 25.67px;
+        }
     }
 
     &__tags {
@@ -34,6 +47,7 @@
         justify-content: left;
         column-gap: 10px;
         flex-wrap: wrap;
+
 
         .logement__tag {
             min-width: 84px;
@@ -47,15 +61,22 @@
             text-align: center;
             padding: 0px 8px;    
             margin-bottom: 16px; 
+            @media (min-width: 768px) {
+                font-size: 14px;
+                min-width: 115px;
+                height: 25px;
+                line-height: 25px;
+            }
 
         }
     }
-    &__review {
+    &__review-flexbox {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         height: 33px;
         line-height: 33px;
+
         
         .logement__rating {
             height: 18px;
@@ -68,6 +89,12 @@
             justify-content: end;
             column-gap: 10.5px;
             align-items: center;
+            width: 135.5px;
+            height: 33px;
+            @media (min-width: 768px) {
+                width: 167px;
+                height: 64px;
+            }
 
             &__name {
                color: $salmon-background;
@@ -75,6 +102,9 @@
                font-weight: 500;
                line-height: 17.11px;
                text-align: right;
+               @media (min-width: 768px) {
+                    font-size: 18px;
+               }
                
             }
 
@@ -83,6 +113,10 @@
                 width: 32px;
                 border-radius: 50%;
                 object-fit: cover;
+                @media (min-width: 768px) {
+                    height: 64px;
+                    width: 64px;
+               }
             }
         }
 

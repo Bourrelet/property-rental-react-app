@@ -42,18 +42,6 @@ a {
 }
 
 
-// h2 { // oups et titre fichelogement
-
-// }
-
-// h3 { // liens nav et apropos
-    
-// }
-
-// h4 { // titres cards et collapses
-    
-// }
-
 strong {
     font-weight: 700; /* Enlève le gras par défaut */
     color: rgba(255, 255, 255, 1); /* Inhère la couleur du parent */
@@ -64,14 +52,14 @@ strong {
 li , p {
     font-size: 12px;
     font-weight: 500;
-    line-height: 17.11px;
+    // line-height: 17.11px;
 }
 
 li {
     @media (min-width: 768px) {
         font-size: 24px;
         font-weight: 500;
-        line-height: 34.22px;        
+        // line-height: 34.22px;        
     }
 
 }
@@ -80,7 +68,7 @@ p {
     @media (min-width: 768px) {
         font-size: 18px;
         font-weight: 400;
-        line-height: 25.67px;     
+        // line-height: 25.67px;     
     }
 
 }

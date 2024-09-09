@@ -6,21 +6,30 @@
     flex-direction: column;
     text-align: left;
     line-height: 1.426;
-    // @media (min-width: 768px) {
-    //     width: 46.935vw;
-    // }
+    @media (min-width: 768px) {
+        width: 46.935vw;
+    }
 
         &__container {
             @include flex-between;
             border-radius: 5px;
             background-color: $salmon-background;
             color: white;
+            height: 30px; 
+            @media (min-width: 768px) {
+                height: 52px;
+            }
         }
 
-            &__title {
+            &__title {        
+                padding: 10px 0px 10px 10px;                    
                 font-size: 13px;
-                padding: 10px 0px 10px 10px;
+                // line-height: 30px;                           
+                @media (min-width: 768px) {
+                    font-size: 18px;
+                    // line-height: 52px;
             }
+        }
             &__btn {
                 @include flex-left;
                 // width: 9.515%;
@@ -28,6 +37,10 @@
                 border: inherit;
                 background-color: inherit;
                 color: inherit;
+                @media (min-width: 768px) {
+                    width: 42px;
+                }
+                
             }
 
         &__content {
@@ -52,5 +65,8 @@
 .fa-angle-down, .fa-angle-up {
     font-size: 1.57em;
     transform: scaleX(1.02);
+    @media (min-width: 768px) {
+        font-size: 2.35em;
+    }
 }
 

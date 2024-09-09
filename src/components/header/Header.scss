@@ -10,12 +10,14 @@
     }
 
         &__logo {
-            @media (min-width: 768px) {
-                max-height: 68px;                
-            }
+            height: 100%;
+            // @media (min-width: 768px) {
+            //     max-height: 68px;                
+            // }
         }
 
         &__link {
+            height: 100%;
             @include flex-right;
             row-gap: 26px;
             
