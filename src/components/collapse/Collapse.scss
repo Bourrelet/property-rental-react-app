@@ -33,14 +33,18 @@
             &__btn {
                 @include flex-left;
                 // width: 9.515%;
-                min-width: 32px;
+                // min-width: 32px;
+                margin-left: 12px;
+                margin-right: 12px;
                 border: inherit;
                 background-color: inherit;
                 color: inherit;
                 @media (min-width: 768px) {
-                    width: 42px;
+                    // width: 42px;
+                    margin-left: 24px;
+                    margin-right: 24px;
                 }
-                
+            
             }
 
         &__content {
@@ -70,3 +74,9 @@
     }
 }
 
+.fa-angle-down:hover {
+    cursor: pointer;
+    }
+.fa-angle-up:hover {
+    cursor: pointer;
+    }

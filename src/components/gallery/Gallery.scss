@@ -26,12 +26,8 @@
             display: flex;
             justify-content: space-between;
             @media (min-width: 768px) { 
-                top: 35.575%;
-            }
-            
-            
-            
-        
+                top:  40.975%;
+            }        
 
             &__btn {
                 height: 24px;
@@ -41,10 +37,13 @@
                 font-size: 1.2em;
                 @media (min-width: 768px) { 
                     font-size: 4.67em;
-                    line-height: 119.64px;
-                    height: 119.64px;
+                    line-height: 74.72px;
+                    height: 74.72px;
                     width: 96px;
                 }
+            }
+            &__btn:hover {
+                cursor: pointer;
             }
         }
         
