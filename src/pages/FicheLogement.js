@@ -33,7 +33,7 @@ const FicheLogement = () => {
   return (
     <div className="logement">
 
-      <div className="gallerie">
+      <div className="gallery">
         <Gallery logement={logement.pictures} />     
       </div>
 

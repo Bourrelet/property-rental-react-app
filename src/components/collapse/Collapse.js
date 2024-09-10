@@ -30,7 +30,11 @@ const Collapse = ({title, content}) => {
          
         </div>
 
-        <div className={`collapse__content ${dynamicClass}`}><p >{content}</p></div>          
+        <div className={`collapse__content ${dynamicClass}`}>
+        {Array.isArray(content)? 
+             content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>
+        }        
+        </div>          
 
     </div>
     );
