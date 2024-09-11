@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Pour la navigation
+import { Link , useLocation } from 'react-router-dom'; // Pour la navigation
 import './Header.scss';
 
 const Header = () => {
+
+  const location = useLocation();
+
   return (
     <header>
       <nav className="navbar">
@@ -10,8 +13,8 @@ const Header = () => {
          srcSet="/kasalogomobile.png 768w, /kasalogodesktop.png 769w"
         alt="logo Kasa"/>
         <ul className="navbar__link">
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/apropos">À Propos</Link></li>
+          <li className={location.pathname === '/' ? 'underlined' : ''}><Link to="/">Accueil</Link></li>
+          <li className={location.pathname === '/apropos' ? 'underlined' : ''}><Link to="/apropos">À Propos</Link></li>
         </ul>
       </nav>
     </header>
