@@ -1,4 +1,3 @@
-// src/components/Error404.js
 import React from 'react';
 import { Link } from 'react-router-dom'; // Pour la navigation
 import './Error404.scss';

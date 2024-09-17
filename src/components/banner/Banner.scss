@@ -19,7 +19,6 @@
         &__overlay {
             @include banner-frame;
             background-color: rgba(0, 0, 0, 0.6); 
-            // mix-blend-mode: darken; /* Applique l'effet de fusion */
             z-index: 2;
         }
 
@@ -35,8 +34,7 @@
             @media (min-width: 768px) { 
                 margin: 0 auto;
                 text-align: center;
-                font-size: 48px;
-                // line-height: 68.45px;
+                font-size: 48px;             
 
         
             }

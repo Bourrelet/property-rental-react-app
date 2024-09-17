@@ -1,7 +1,4 @@
-// Reset CSS : Un reset ou normalisation CSS pour s'assurer que les styles de base sont cohérents sur tous les navigateurs.
-// Styles généraux du body : Couleurs de fond, marges, paddings globaux, typographie par défaut.
-// Styles globaux : Définition de styles pour les éléments HTML comme les titres (h1, h2, h3), les paragraphes, les listes, etc.
-// Typographie de base : Définition des polices et des tailles globales pour les textes.
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 * {
@@ -44,7 +41,7 @@ a {
 
 strong {
     font-weight: 700; /* Enlève le gras par défaut */
-    color: rgba(255, 255, 255, 1); /* Inhère la couleur du parent */
+    color: rgba(255, 255, 255, 1); 
     font-size: 18px;
     line-height: 25.67px;
 }
@@ -52,14 +49,14 @@ strong {
 li , p {
     font-size: 12px;
     font-weight: 500;
-    // line-height: 17.11px;
+    
 }
 
 li {
     @media (min-width: 768px) {
         font-size: 24px;
         font-weight: 500;
-        // line-height: 34.22px;        
+             
     }
 
 }
@@ -68,7 +65,7 @@ p {
     @media (min-width: 768px) {
         font-size: 18px;
         font-weight: 400;
-        // line-height: 25.67px;     
+          
     }
 
 }
@@ -78,31 +75,3 @@ p {
 
 
 
-// src/styles/base.scss
-
-// // Reset ou Normalize
-
-  
-//   // Styles de base pour le corps du document
-//   body {
-//     font-family: 'Arial, sans-serif';
-//     background-color: #f5f5f5;
-//     color: #333;
-//     line-height: 1.6;
-//   }
-  
-//   // Typographie de base
-//   h1, h2, h3, h4, h5, h6 {
-//     font-weight: 600;
-//     margin-bottom: 1rem;
-//   }
-  
-//   p {
-//     margin-bottom: 1rem;
-//   }
-  
-//   a {
-//     color: #3498db;
-//     text-decoration: none;
-//   }
-  
