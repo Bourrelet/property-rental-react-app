@@ -1,4 +1,4 @@
-@import '../../styles/variables'; // Probleme de module ; ne trouve pas la stylesheet.
+@import '../../styles/variables'; 
 @import '../../styles/mixins';
 
 .collapse {
@@ -23,26 +23,43 @@
 
             &__title {        
                 padding: 10px 0px 10px 10px;                    
-                font-size: 13px;
-                // line-height: 30px;                           
+                font-size: 13px;                           
                 @media (min-width: 768px) {
                     font-size: 18px;
-                    // line-height: 52px;
+
             }
         }
             &__btn {
                 @include flex-left;
-                // width: 9.515%;
-                // min-width: 32px;
                 margin-left: 12px;
                 margin-right: 12px;
                 border: inherit;
                 background-color: inherit;
                 color: inherit;
+                   
+                transition: transform 0.3s ease-in-out;
+
                 @media (min-width: 768px) {
-                    // width: 42px;
                     margin-left: 24px;
                     margin-right: 24px;
+                }
+
+                .up {
+                    transition: transform 0.5s ease;
+                    transform: scaleX(1.02) rotate(0deg);
+                    font-size: 1.57em;
+                    @media (min-width: 768px) {
+                        font-size: 2.35em;
+                    }
+                }
+
+                .down {
+                    transition: transform 0.5s ease;
+                    transform: scaleX(1.02) rotate(-180deg);
+                    font-size: 1.57em;
+                    @media (min-width: 768px) {
+                        font-size: 2.35em;
+                    }
                 }
             
             }
@@ -50,28 +67,23 @@
         &__content {
             background-color: $grey-background;
             font-size: 12px;
-            padding: 13px 20px 19px;
+            
+            overflow: hidden;
+            transition: max-height 0.5s ease;
 
             &.isClosed {
-                height: 0px;
-                overflow: hidden;
-                transition: height 0.3s ease;
-                padding: 0px;
+                max-height: 0px;
             }
 
             &.isOpen {
-                height: auto;              
+                max-height: 1000px;           
             }
+            .collapse__data {
+                padding: 13px 20px 19px;  
+            }
+
             
         }  
-}
-
-.fa-angle-down, .fa-angle-up {
-    font-size: 1.57em;
-    transform: scaleX(1.02);
-    @media (min-width: 768px) {
-        font-size: 2.35em;
-    }
 }
 
 .fa-angle-down:hover {

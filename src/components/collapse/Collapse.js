@@ -2,8 +2,6 @@ import './Collapse.scss';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-const openButton = <FontAwesomeIcon icon={faAngleUp} />;
-const closeButton = <FontAwesomeIcon icon={faAngleDown} />;
 
 const Collapse = ({title, content}) => {
 
@@ -15,7 +13,8 @@ const Collapse = ({title, content}) => {
         setCollaspeOpen(!collapseOpen);
     }
 
-    const dynamicClass = `${collapseOpen ? 'isOpen' : 'isClosed'}`;
+    const dynamicTag = `${collapseOpen ? 'isOpen' : 'isClosed'}`;
+    const dynamicRotation = `${collapseOpen ? 'down' : 'up'}`;
 
     return (
 
@@ -24,16 +23,18 @@ const Collapse = ({title, content}) => {
         <div className="collapse__container">
 
             <h2 className="collapse__title">{title}</h2>
-            <button onClick={toggleCollapse} className="collapse__btn isClosed">
-                {collapseOpen? closeButton : openButton}
+            <button onClick={toggleCollapse} className='collapse__btn'>
+                <FontAwesomeIcon icon={faAngleUp} className={dynamicRotation}/>
             </button>
          
         </div>
 
-        <div className={`collapse__content ${dynamicClass}`}>
-        {Array.isArray(content)? 
-             content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>
-        }        
+        <div className={`collapse__content ${dynamicTag}`}>
+            <div className='collapse__data'>
+                {Array.isArray(content)? 
+                    content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>
+                }        
+            </div>
         </div>          
 
     </div>
