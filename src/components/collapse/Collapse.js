@@ -18,24 +18,27 @@ const Collapse = ({title, content}) => {
 
     return (
 
-    <div className="collapse">
+    <div className="component">
 
-        <div className="collapse__container">
+        <div className="collapse">
 
-            <h2 className="collapse__title">{title}</h2>
-            <button onClick={toggleCollapse} className='collapse__btn'>
-                <FontAwesomeIcon icon={faAngleUp} className={dynamicRotation}/>
-            </button>
-         
+            <div className="collapse__container">   
+                <h2 className="collapse__title">{title}</h2>
+                <button onClick={toggleCollapse} className='collapse__btn'>
+                    <FontAwesomeIcon icon={faAngleUp} className={dynamicRotation}/>
+                </button>
+            </div>
+
+            <div className={`collapse__content ${dynamicTag}`}>
+                <div className='collapse__data'>
+                    {Array.isArray(content)? 
+                        content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>
+                    }        
+                </div>
+            </div>               
         </div>
 
-        <div className={`collapse__content ${dynamicTag}`}>
-            <div className='collapse__data'>
-                {Array.isArray(content)? 
-                    content.map((item, index) => <p key={index}>{item}</p>) : <p>{content}</p>
-                }        
-            </div>
-        </div>          
+            
 
     </div>
     );

@@ -1,7 +1,8 @@
 @import '../../styles/variables'; 
 @import '../../styles/mixins';
 
-.collapse {
+.component {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -9,82 +10,96 @@
     @media (min-width: 768px) {
         width: 46.935vw;
     }
+}
+        .collapse {
+            position: relative;
+            overflow: hidden;
+        
 
-        &__container {
-            @include flex-between;
-            border-radius: 5px;
-            background-color: $salmon-background;
-            color: white;
-            height: 30px; 
-            @media (min-width: 768px) {
-                height: 52px;
+            &__container {
+                position: relative;
+                z-index: 1;
+
+                @include flex-between;
+                border-radius: 5px;
+                background-color: $salmon-background;
+                color: white;
+                height: 30px; 
+                @media (min-width: 768px) {
+                    height: 52px;
+                }
             }
-        }
+                
 
             &__title {        
-                padding: 10px 0px 10px 10px;                    
-                font-size: 13px;                           
-                @media (min-width: 768px) {
-                    font-size: 18px;
-
+                    padding: 10px 0px 10px 10px;                    
+                    font-size: 13px;                           
+                    @media (min-width: 768px) {
+                        font-size: 18px;
+                    }
             }
-        }
+            
             &__btn {
-                @include flex-left;
-                margin-left: 12px;
-                margin-right: 12px;
-                border: inherit;
-                background-color: inherit;
-                color: inherit;
-                   
-                transition: transform 0.3s ease-in-out;
+                    @include flex-left;
+                    margin-left: 12px;
+                    margin-right: 12px;
+                    border: inherit;
+                    background-color: inherit;
+                    color: inherit;
 
-                @media (min-width: 768px) {
-                    margin-left: 24px;
-                    margin-right: 24px;
-                }
-
-                .up {
-                    transition: transform 0.5s ease;
-                    transform: scaleX(1.02) rotate(0deg);
-                    font-size: 1.57em;
                     @media (min-width: 768px) {
-                        font-size: 2.35em;
+                        margin-left: 24px;
+                        margin-right: 24px;
                     }
+
+                        .up {
+                            transition: transform 0.5s ease;
+                            transform: scaleX(1.02) rotate(0deg);
+                            font-size: 1.57em;
+                            @media (min-width: 768px) {
+                                font-size: 2.35em;
+                            }
+                        }
+
+                        .down {
+                            transition: transform 0.5s ease;
+                            transform: scaleX(1.02) rotate(-180deg);
+                            font-size: 1.57em;
+                            @media (min-width: 768px) {
+                                font-size: 2.35em;
+                            }
+                        }
+                           
+            }
+        
+
+            &__content {
+                position: relative;
+                z-index: 0;
+
+                background-color: $grey-background;
+                font-size: 12px;
+                
+                overflow: hidden;
+                transition: transform 0.5s ease, max-height 0.5s ease;
+
+                &.isClosed {
+                    transform: translateY(-100%);
+                    max-height: 0;
                 }
 
-                .down {
-                    transition: transform 0.5s ease;
-                    transform: scaleX(1.02) rotate(-180deg);
-                    font-size: 1.57em;
-                    @media (min-width: 768px) {
-                        font-size: 2.35em;
-                    }
+                &.isOpen {
+                    transform: translateY(0);
+                    max-height: 1000px;          
                 }
-            
-            }
+                .collapse__data {
+                    padding: 13px 20px 19px;  
+                }
 
-        &__content {
-            background-color: $grey-background;
-            font-size: 12px;
-            
-            overflow: hidden;
-            transition: max-height 0.5s ease;
+                
+            }  
+        }
 
-            &.isClosed {
-                max-height: 0px;
-            }
-
-            &.isOpen {
-                max-height: 1000px;           
-            }
-            .collapse__data {
-                padding: 13px 20px 19px;  
-            }
-
-            
-        }  
-}
 
 .fa-angle-down:hover {
     cursor: pointer;
