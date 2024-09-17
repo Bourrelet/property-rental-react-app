@@ -22,7 +22,7 @@ const Gallery= ({logement}) => {
 
     return (
             <div className='gallerie'>
-                <img className='gallerie__img' src={logement[activeIndex]} alt={`Image ${activeIndex} + 1`}/>
+                <img className='gallerie__img' src={logement[activeIndex]} alt={`${activeIndex} + 1`}/>
 
                 {logement.length > 1 && (
                     <div className='gallerie__nav'>
