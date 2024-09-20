@@ -17,7 +17,7 @@ const FicheLogement = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const logement = logements.find(item => item.id == id);
+  const logement = logements.find(item => item.id === id);
 
   useEffect(() => {
     if (!logement) {
@@ -60,7 +60,7 @@ const FicheLogement = () => {
           </div>
           <div className='logement__host'>
             <p className='logement__host__name'>{logement.host.name}</p>
-            <img className='logement__host__img' src={logement.host.picture}/>
+            <img className='logement__host__img' src={logement.host.picture} alt={logement.host.name}/>
           </div>
         </div>
 
