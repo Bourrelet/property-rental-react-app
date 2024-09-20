@@ -167,6 +167,11 @@
             
             column-gap: 5.278vw;
         }
+        &__box {
+            @media (min-width: 768px) {
+            width: 46.935vw;
+            }
+        }
         
     }
 

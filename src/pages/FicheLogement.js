@@ -67,8 +67,14 @@ const FicheLogement = () => {
       </div>
 
       <div className='logement__collapse'>
-        <Collapse title="Description" content={logement.description}/>     
-        <Collapse title="Équipements" content={logement.equipments}/>
+        <div className='logement__collapse__box'>
+          <Collapse title="Description" content={logement.description}/> 
+        </div>
+        <div className='logement__collapse__box'>
+          <Collapse title="Équipements" content={logement.equipments}/>
+        </div>
+            
+        
       </div>
 
 
